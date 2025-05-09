@@ -1,0 +1,246 @@
+/* --- BASE SETUP --- */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f0f8fb; /* Brighter Blue-Tinted Background */
+    color: #2e3e3d; /* Charcoal Teal */
+  }
+  
+  h1, h2, .navbar-brand {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 100;
+    color: #2f6e8c;
+    letter-spacing: 0.3px;
+  }
+  
+  /* Top Contact Bar */
+  .top-bar {
+    background-color: #d2e8f0; /* Lighter Blue-Green */
+    border-bottom: 1px solid #b3d4db;
+    font-size: 0.85rem;
+    padding: 0.3rem 1rem;
+  }
+  
+  .top-bar .container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  /* Navbar */
+  .navbar {
+    transition: background-color 0.5s ease, color 0.5s ease, border-bottom 0.5s ease;
+    font-weight: 500;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .navbar a.nav-link, .navbar a.navbar-brand, .navbar .btn-theme {
+    transition: color 0.5s ease, background-color 0.5s ease;
+  }
+  
+  .navbar.transparent {
+    background-color: transparent;
+    border-bottom: none;
+  }
+  
+  .navbar.transparent .nav-link,
+  .navbar.transparent .navbar-brand,
+  .navbar.transparent .btn-theme {
+    color: #ffffff !important;
+  }
+  
+  .navbar.solid {
+    background-color: #d2e8f0; /* Light Blue-Green */
+    border-bottom: 1px solid #b3d4db;
+  }
+  
+  .navbar.solid .nav-link,
+  .navbar.solid .navbar-brand {
+    color: #2e3e3d !important;
+  }
+  
+  /* Hero Section */
+  .hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 60, 90, 0.45); /* Cool Blue Tint */
+    z-index: 1;
+  }
+  
+  .hero-overlay-graphic {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1366px;
+    max-width: 90vw;
+    opacity: 0.65;
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  .hero-content {
+    position: absolute;
+    bottom: 15%;
+    right: 5%;
+    text-align: right;
+    z-index: 2;
+    animation: fadeIn 1.5s ease;
+  }
+  
+  .hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: #ffffff; /* Bright White */
+  }
+  
+  /* Section Headings */
+  .section-heading {
+    font-weight: 100;
+    color: #2f6e8c; /* Rich Blue-Green */
+  }
+  
+  .features-section h5 {
+    margin-top: 1rem;
+    font-weight: 200;
+    color: #2e3e3d;
+  }
+  
+  /* Horizontal Line */
+  .section-line {
+    width: 0;
+    height: 3px;
+    background-color: #2f6e8c; /* Rich Blue-Green */
+    margin: 0 auto 1.5rem auto;
+    transition: width 0.8s ease;
+  }
+  .section-line.grow {
+    width: 180px;
+  }
+  
+  /* Cards */
+  .card {
+    border: 1px solid #b3d4db;
+    border-radius: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+    background-color: #ffffff;
+    height: 100%;
+    text-align: center;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Team Section */
+  .team-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background: url('../assets/section_bkgjpg.jpg') center center / cover no-repeat fixed;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-align: left;
+  }
+  
+  .team-section .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 60, 90, 0.65); /* More Blue-Tinted Overlay */
+    z-index: 1;
+  }
+  
+  .team-section .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .team-section img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    margin-right: 2rem;
+  }
+  
+  .team-section .section-heading {
+    font-weight: 100;
+    margin-bottom: 0.5rem;
+  }
+  
+  .team-section p.lead {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  /* Buttons (Solid Color - No Gradient) */
+  .btn-theme {
+    background-color: #2f6e8c; /* Rich Blue-Green */
+    color: white;
+    border: none;
+    border-radius: 0;
+    padding: 0.5rem 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn-theme:hover {
+    background-color: #25566e; /* Darker Blue-Green */
+    color: white;
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* --- Features Section --- */
+  .features-section {
+    background-color: #d2e8f0; /* Pale Blue-Green */
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  
+  .feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .feature-icon {
+    font-size: 4rem;
+    color: #2f6e8c; /* Rich Blue-Green */
+  }
+  

@@ -1,0 +1,211 @@
+/* --- Nature Theme CSS (Bold, Modern, Sans-Serif for Distinction) --- */
+
+:root {
+    --soft-green: #e3f4e3;
+    --deep-forest: #3e5b48;
+    --mid-green: #76a38a;
+    --warm-gray: #f7f7f5;
+    --neutral-text: #444;
+  }
+  
+  body {
+    font-family: 'Montserrat', 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: var(--warm-gray);
+    color: var(--neutral-text);
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, .navbar-brand {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
+    color: var(--deep-forest);
+    letter-spacing: 0.5px;
+  }
+  
+  /* Navbar */
+  .navbar {
+    transition: background-color 0.4s ease, color 0.4s ease, border-bottom 0.4s ease;
+    font-weight: 600;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid transparent;
+  }
+  
+  .navbar.transparent {
+    background-color: transparent;
+    border-bottom: none;
+  }
+  
+  .navbar.transparent .nav-link,
+  .navbar.transparent .navbar-brand,
+  .navbar.transparent .btn-theme {
+    color: #ffffff !important;
+  }
+  
+  .navbar.solid {
+    background-color: var(--soft-green);
+    border-bottom: 1px solid #b3d4cb;
+  }
+  
+  .navbar.solid .nav-link,
+  .navbar.solid .navbar-brand {
+    color: var(--deep-forest) !important;
+  }
+  
+  /* Hero Section (video-based layout) */
+  .hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 3rem;
+    text-align: left;
+    color: white;
+  }
+  
+  .hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(40, 70, 55, 0.4);
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    padding: 1rem 2rem;
+    max-width: 600px;
+  }
+  
+  .hero h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p.subtext {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #f1fdf1;
+    margin-top: 0;
+  }
+  
+  .section-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--deep-forest);
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .section-line {
+    width: 100px;
+    height: 3px;
+    background-color: var(--mid-green);
+    margin: 0 auto 2rem;
+    border-radius: 2px;
+    transition: width 0.8s ease;
+  }
+  
+  .section-line.grow {
+    width: 180px;
+  }
+  
+  .btn-theme {
+    background-color: var(--deep-forest);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.6rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .btn-theme:hover {
+    background-color: var(--mid-green);
+  }
+  
+  .card {
+    background-color: #fff;
+    border: 1px solid #d4e4d4;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+    padding: 1.5rem;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .card h5 {
+    color: var(--deep-forest);
+    font-weight: 700;
+    margin-top: 1rem;
+  }
+  
+  .features-section {
+    background-color: var(--soft-green);
+    padding: 6rem 0;
+    border-radius: 0 0 24px 24px;
+  }
+  
+  .feature-icon {
+    font-size: 3rem;
+    color: var(--deep-forest);
+    margin-bottom: 1rem;
+  }
+  
+  .team-section {
+    background: url('../assets/trees.jpg') center center / cover no-repeat fixed;
+    position: relative;
+    color: white;
+    padding: 5rem 0;
+  }
+  
+  .team-section .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(40, 70, 55, 0.6);
+    z-index: 1;
+  }
+  
+  .team-section .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .team-section img {
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  }
+  
+  .team-section .section-heading,
+  .team-section p.lead {
+    color: #ffffff;
+  }
