@@ -75,10 +75,14 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <video autoplay muted loop playsinline>
-      <source src="assets/officepictures2.mp4" type="video/mp4" />
-      Your browser does not support HTML5 video.
-    </video>
+    <video id="heroVideo" autoplay muted loop playsinline>
+  <source src="assets/redwoods2.mp4" type="video/mp4" />
+  Your browser does not support HTML5 video.
+</video>
+
+    
+
+
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <h1>Creating Beautiful Smiles With Gentle Care</h1>
@@ -120,23 +124,53 @@
     </div>
   </section>
 
-  <!-- Team Section -->
-  <section class="team-section text-white py-5 position-relative">
-    <div class="background-overlay"></div>
-    <div class="container position-relative">
-      <div class="row align-items-center">
-        <div class="col-lg-6 mb-4 mb-lg-0">
-          <img src="assets/team.jpg" alt="Dental Team" class="img-fluid shadow">
-        </div>
-        <div class="col-lg-6">
-          <h2 class="section-heading text-white">Meet Your New Dental Team</h2>
-          <div class="section-line" style="margin-left:auto; margin-right:auto;"></div>
-          <p class="lead mb-4">Our dedicated team is here to deliver gentle, personalized care in a welcoming, modern environment. At Modern Calm Dental, your comfort and smile are our top priorities.</p>
-          <a href="#" class="btn btn-theme ms-3">Learn More</a>
-        </div>
-      </div>
+
+
+  <!-- Testimonial Section -->
+<!-- Testimonial Section -->
+<section class="team-section text-white py-5 position-relative">
+  <div class="background-overlay"></div>
+  <div class="container position-relative d-flex justify-content-center">
+    <div class="frosted-team-box text-center px-4 py-5" style="max-width: 720px;">
+      <h2 class="section-heading">What Our Patients Say</h2>
+      <div class="section-line mx-auto mb-4"></div>
+      <p class="lead mb-4">
+        “Modern Calm Dental made me feel comfortable from the moment I walked in. The staff were incredibly kind and my treatment was pain-free. Highly recommend!”
+      </p>
+      <h5 class="mb-0">— Alex M.</h5>
     </div>
-  </section>
+  </div>
+</section>
+
+
+
+
+<section class="care-section py-5">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <!-- Rounded Video -->
+      <div class="col-lg-6">
+        <video autoplay muted loop playsinline class="rounded-video shadow">
+          <source src="assets/officepictures2.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+
+      <!-- Centered Text Content -->
+      <div class="col-lg-6 text-center text-light">
+        <h2 class="section-heading text-light">One Office for All Your Dental Care Needs</h2>
+        <div class="section-line mx-auto"></div>
+        <p class="lead mt-3">
+          From preventive cleanings and gentle exams to cosmetic restorations and advanced procedures,
+          our modern office is fully equipped to meet your dental needs — all under one calming roof.
+        </p>
+        <a href="#" class="btn btn-accent mt-4">Explore Services</a>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
 <section class="footer-section pt-5 pb-4">
@@ -218,34 +252,38 @@
   const themes = [
     {
       name: 'olive',
-  vars: {
-    '--soft-green': '#f7f5ee',                  // lightened parchment base
-    '--deep-forest': '#75693c',                 // lightened from #594C23 (~20%)
-    '--mid-green': '#b89d65',                   // lightened from #9e8752
-    '--warm-gray': '#fbf9f2',                   // brighter warm-gray
-    '--neutral-text': '#5b5131',                // lighter than original #3f361a
-    '--overlay-color': 'rgba(117, 105, 60, 0.15)', // softer, desaturated version
-    '--overlay-dark': 'rgba(32, 38, 42, 0.53)',    // lighter but still legible
-    '--glass-bg': 'rgba(255, 255, 255, 0.45)',
-    '--glass-border': 'rgba(255, 255, 255, 0.1)'
-  }
+      video: 'redwoods2.mov',
+      teamBg: 'trees.jpg',
+      vars: {
+        '--soft-green': '#f6f2e6',
+        '--deep-forest': '#594C23',
+        '--mid-green': '#9e8752',
+        '--warm-gray': '#f8f4ec',
+        '--neutral-text': '#3f361a',
+        '--overlay-color': 'rgba(89, 76, 35, 0.18)',
+        '--overlay-dark': 'rgba(46, 40, 32, 0.40)',
+        '--glass-border': 'rgba(255, 255, 255, 0.1)'
+      }
     },
     {
       name: 'moss',
+      video: 'redwoods2.mov',
+      teamBg: 'trees.jpg',
       vars: {
-        '--soft-green': '#eff3e8',
+        '--soft-green': '#f2f5ec',
         '--deep-forest': '#767249',
         '--mid-green': '#a9b16e',
         '--warm-gray': '#f4f7ef',
         '--neutral-text': '#4b502a',
         '--overlay-color': 'rgba(118, 114, 73, 0.18)',
-        '--overlay-dark': 'rgba(32, 38, 42, 0.53)',
-        '--glass-bg': 'rgba(255, 255, 255, 0.4)',
+        '--overlay-dark': 'rgba(50, 48, 40, 0.38)',
         '--glass-border': 'rgba(255, 255, 255, 0.08)'
       }
     },
     {
       name: 'fern',
+      video: 'redwoods2.mov',
+      teamBg: 'trees.jpg',
       vars: {
         '--soft-green': '#f0f7ec',
         '--deep-forest': '#5f7c3a',
@@ -253,13 +291,14 @@
         '--warm-gray': '#f8fcf3',
         '--neutral-text': '#3e4c2e',
         '--overlay-color': 'rgba(95, 124, 58, 0.15)',
-        '--overlay-dark': 'rgba(32, 38, 42, 0.53)',
-        '--glass-bg': 'rgba(255, 255, 255, 0.45)',
+        '--overlay-dark': 'rgba(60, 65, 50, 0.36)',
         '--glass-border': 'rgba(255, 255, 255, 0.08)'
       }
     },
     {
       name: 'slate',
+      video: 'mtnvid2.mov',
+      teamBg: 'cliffs.jpg',
       vars: {
         '--soft-green': '#f7f9fa',
         '--deep-forest': '#36454f',
@@ -267,27 +306,29 @@
         '--warm-gray': '#dee3e8',
         '--neutral-text': '#36454f',
         '--overlay-color': 'rgba(20, 24, 28, 0.25)',
-        '--overlay-dark': 'rgba(32, 38, 42, 0.53)',
-        '--glass-bg': 'rgba(255, 255, 255, 0.4)',
+        '--overlay-dark': 'rgba(32, 38, 42, 0.13)',
         '--glass-border': 'rgba(0, 0, 0, 0)'
       }
     },
     {
       name: 'ash',
+      video: 'mtnvid2.mov',
+      teamBg: 'cliffs.jpg',
       vars: {
         '--soft-green': '#f5f7f9',
-        '--deep-forest': '#3a4854',       /* Slightly bluer than slate */
-        '--mid-green': '#6d7e8a',         /* Cooler slate-blue accent */
+        '--deep-forest': '#3a4854',
+        '--mid-green': '#6d7e8a',
         '--warm-gray': '#e3e7ec',
         '--neutral-text': '#3a4854',
         '--overlay-color': 'rgba(25, 30, 35, 0.24)',
-        '--overlay-dark': 'rgba(30, 35, 42, 0.52)',
-        '--glass-bg': 'rgba(255, 255, 255, 0.4)',
+        '--overlay-dark': 'rgba(30, 35, 42, 0.12)',
         '--glass-border': 'rgba(0, 0, 0, 0)'
       }
     },
     {
       name: 'charcoal',
+      video: 'mtnvid2.mov',
+      teamBg: 'cliffs.jpg',
       vars: {
         '--soft-green': '#f8f9fa',
         '--deep-forest': '#2e3336',
@@ -295,8 +336,7 @@
         '--warm-gray': '#dfe4e8',
         '--neutral-text': '#2e3336',
         '--overlay-color': 'rgba(15, 15, 15, 0.28)',
-        '--overlay-dark': 'rgba(25, 25, 25, 0.55)',
-        '--glass-bg': 'rgba(255, 255, 255, 0.4)',
+        '--overlay-dark': 'rgba(25, 25, 25, 0.15)',
         '--glass-border': 'rgba(0, 0, 0, 0)'
       }
     }
@@ -304,26 +344,48 @@
 
   const slider = document.getElementById('themeSlider');
   const label = document.getElementById('activeThemeLabel');
+  const heroVideo = document.getElementById('heroVideo');
+  const teamSection = document.querySelector('.team-section');
 
   function applyTheme(index) {
-  const theme = themes[index];
+    const theme = themes[index];
 
-  // Apply CSS variables
-  for (const key in theme.vars) {
-    document.documentElement.style.setProperty(key, theme.vars[key]);
+    // Apply CSS variables
+    for (const key in theme.vars) {
+      if (key !== '--glass-bg') {
+        document.documentElement.style.setProperty(key, theme.vars[key]);
+      }
+    }
+
+    // Set glass background based on deep-forest
+    const deepForestHex = theme.vars['--mid-green'];
+    const glassColor = hexToRgba(deepForestHex, 0.45);
+    document.documentElement.style.setProperty('--glass-bg', glassColor);
+
+    // Update theme label
+    label.textContent = theme.name;
+
+    // Update hero video
+    const newVideoSrc = `assets/${theme.video}`;
+    const sourceTag = heroVideo.querySelector('source');
+    if (sourceTag.getAttribute('src') !== newVideoSrc) {
+      sourceTag.setAttribute('src', newVideoSrc);
+      heroVideo.load();
+      heroVideo.play();
+    }
+
+    // Update background image in team section
+    teamSection.style.backgroundImage = `url('assets/${theme.teamBg}')`;
+
+    updateSwatchDisplay(theme);
   }
 
-  label.textContent = theme.name;
-  updateSwatchDisplay(theme);
-
-  // Update team-section background image
-  const teamSection = document.querySelector('.team-section');
-  if (teamSection) {
-    const bgImage = index <= 2 ? 'trees.jpg' : 'cliffs.jpg'; // first 3 = green, last 3 = rock
-    teamSection.style.backgroundImage = `url('assets/${bgImage}')`;
+  function hexToRgba(hex, alpha) {
+    const r = parseInt(hex.substr(1, 2), 16);
+    const g = parseInt(hex.substr(3, 2), 16);
+    const b = parseInt(hex.substr(5, 2), 16);
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
   }
-}
-
 
   function updateSwatchDisplay(theme) {
     const display = document.getElementById('currentThemeSwatches');
@@ -340,7 +402,9 @@
     ];
 
     swatchKeys.forEach(({ key, label }) => {
-      const color = theme.vars[key];
+      const color = key === '--glass-bg'
+        ? getComputedStyle(document.documentElement).getPropertyValue('--glass-bg')
+        : theme.vars[key];
       const swatch = document.createElement('div');
       swatch.className = 'theme-color-swatch';
       swatch.innerHTML = `
@@ -355,9 +419,9 @@
     applyTheme(parseInt(slider.value));
   });
 
-  // On page load
   applyTheme(parseInt(slider.value));
 </script>
+
 
 
 
