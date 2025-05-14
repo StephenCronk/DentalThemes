@@ -1,0 +1,277 @@
+/* --- BASE SETUP --- */
+body {
+    font-family: 'DM Sans', 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f7f9fa; /* Mist White */
+    color: #36454f; /* Deep Blue Charcoal */
+}
+  
+h1, h2, .section-heading {
+    font-family: 'DM Sans', 'Arial', sans-serif;
+    font-weight: 700;
+}
+
+.navbar-brand {
+    font-family: 'Aptos', 'Arial', sans-serif;
+    font-weight: 700;
+}
+  
+/* Top Contact Bar */
+.top-bar {
+    background-color: #dee3e8; /* Soft Cool Gray */
+    border-bottom: 1px solid #c9d6df;
+    font-size: 0.85rem;
+    padding: 0.3rem 1rem;
+    border-radius: 8px; /* Rounded */
+}
+  
+.top-bar .container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+}
+  
+/* Navbar */
+.navbar {
+    transition: background-color 0.5s ease, color 0.5s ease, border-bottom 0.5s ease;
+    font-family: 'Aptos', 'Arial', sans-serif;
+    font-weight: 600;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 8px; /* Rounded */
+}
+  
+.navbar a.nav-link, .navbar a.navbar-brand, .navbar .btn-theme {
+    transition: color 0.5s ease, background-color 0.5s ease;
+    border-radius: 8px; /* Rounded */
+}
+  
+.navbar.transparent {
+    background-color: transparent;
+    border-bottom: none;
+}
+  
+.navbar.transparent .nav-link,
+.navbar.transparent .navbar-brand,
+.navbar.transparent .btn-theme {
+    color: #ffffff !important;
+}
+  
+.navbar.solid {
+    background-color: #dee3e8; /* Soft Cool Gray */
+    border-bottom: 1px solid #c9d6df;
+    border-radius: 8px; /* Rounded */
+}
+  
+.navbar.solid .nav-link,
+.navbar.solid .navbar-brand {
+    color: #36454f !important;
+}
+  
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    border-radius: 0; /* No rounding for hero section background */
+}
+  
+.hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    border-radius: 0; /* No rounding for hero video */
+}
+  
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 15, 15, 0.4);
+    z-index: 1;
+    border-radius: 0; /* No rounding for overlay */
+}
+  
+.hero-overlay-graphic {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1366px;
+    max-width: 90vw;
+    opacity: 0.35;
+    z-index: 2;
+    pointer-events: none;
+    border-radius: 0; /* No rounding for overlay graphic */
+}
+  
+.hero-content {
+    position: absolute;
+    bottom: 15%;
+    right: 5%;
+    text-align: right;
+    z-index: 2;
+    animation: fadeIn 1.5s ease;
+    border-radius: 8px; /* Rounded */
+    background: rgba(0,0,0,0.02); /* Optional: subtle background for contrast */
+    padding: 1.5rem 2rem;
+}
+  
+.hero-content h1 {
+    font-family: 'Baskerville', 'Times New Roman', serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+}
+  
+/* Section Headings */
+.section-heading {
+    font-family: 'DM Sans', 'Arial', sans-serif;
+    font-weight: 700;
+    color: #36454f; /* Deep Blue Charcoal */
+    border-radius: 8px; /* Rounded */
+}
+  
+.features-section h5 {
+    font-family: 'DM Sans', 'Arial', sans-serif;
+    margin-top: 1rem;
+    font-weight: 400;
+    color: #36454f;
+}
+  
+/* Horizontal Line */
+.section-line {
+    width: 0;
+    height: 3px;
+    background-color: #5e7382; /* Slate Blue Gray */
+    margin: 0 auto 1.5rem auto;
+    transition: width 0.8s ease;
+    border-radius: 4px; /* Rounded */
+}
+.section-line.grow {
+    width: 180px;
+}
+  
+/* Cards */
+.card {
+    border: 1px solid #c9d6df;
+    border-radius: 12px; /* Rounded */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+    background-color: #ffffff;
+    height: 100%;
+    text-align: center;
+}
+  
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h5 {
+    font-family: 'DM Sans', 'Arial', sans-serif;
+    font-weight: 700;
+    color: #36454f;
+}
+  
+/* Team Section */
+.team-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background: url('../assets/forest.jpg') center center / cover no-repeat fixed;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-align: left;
+    border-radius: 0; /* No rounding for section background */
+}
+  
+.team-section .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 15, 15, 0.7);
+    z-index: 1;
+    border-radius: 0; /* No rounding for overlay */
+}
+  
+.team-section .container {
+    position: relative;
+    z-index: 2;
+}
+  
+.team-section img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px; /* Rounded */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    margin-right: 2rem;
+}
+  
+.team-section .section-heading {
+    font-family: 'Baskerville', 'Times New Roman', serif;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    border-radius: 0; /* No rounding for heading background */
+}
+  
+.team-section p.lead {
+    font-family: 'DM Sans', 'Arial', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+  
+/* Buttons (Solid Color - No Gradient) */
+.btn-theme {
+    background-color: #5e7382; /* Slate Blue Gray */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Rounded */
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+  
+.btn-theme:hover {
+    background-color: #4a5e6b; /* Darker slate */
+    color: white;
+}
+  
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+  
+/* --- Features Section --- */
+.features-section {
+    background-color: #dee3e8; /* Soft Cool Gray */
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    border-radius: 0; /* No rounding for section background */
+}
+  
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+  
+.feature-icon {
+    font-size: 4rem;
+    color: #5e7382; /* Slate Blue Gray */
+    border-radius: 8px; /* Rounded if needed for icon backgrounds */
+}

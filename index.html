@@ -3,58 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Modern Calm Dental</title>
+  <title>Nature A</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@300;400&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link href="assets/modern-calm-style.css" rel="stylesheet" />
+  <!-- Remove Playfair Display and Urbanist, keep DM Sans if needed -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="assets/modified-nature-light.css" rel="stylesheet" />
   <link rel="icon" href="assets/favicon.png" type="image/png">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
 
+<style>
+    .hero-overlay {
+  background: var(--overlay-dark); /* darker overlay for readability */
+}
+
+.hero-content {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  padding: 0;
+  color: var(--soft-green);
+}
+
+.hero-content h1,
+.hero-content .subtext {
+  color: var(--soft-green) !important;
+}
+
+</style>
 </head>
 
 <body>
+<div id="themeSliderContainer">
+  <div class="theme-info-box">
+    <span id="activeThemeLabel">Earth</span>
+    <div id="currentThemeSwatches">
+  <!-- Swatches will be inserted dynamically -->
+</div>
 
-  <!-- Top Contact Bar -->
+
+    <input type="range" min="0" max="5" value="0" class="horizontal-slider" id="themeSlider">
+  </div>
+</div>
+
 
 
   <!-- Navbar -->
   <nav id="mainNavbar" class="navbar navbar-expand-lg fixed-top transparent px-4">
     <a class="navbar-brand d-flex align-items-center" href="index.html">
       <img id="navbarLogo" src="assets/cd_logo_dark.png" alt="Logo" height="40" class="me-2">
-      Modern Calm Theme
+      
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav align-items-center">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Modern Calm</a></li>
-        <li class="nav-item"><a class="nav-link" href="minimal.html">Elegant Minimal</a></li>
-        <li class="nav-item"><a class="nav-link" href="nature.html">Soft Nature</a></li>
-        <li class="nav-item"><a class="nav-link" href="theme-summary.html">Theme Summary</a></li>
-      </ul>
-      <a href="#" class="btn btn-theme ms-3">Book Now</a>
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Patients</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Team</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
 
+      <a href="#" class="btn btn-theme ms-3">Book Now</a>
     </div>
   </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <video autoplay muted loop playsinline>
-          <source src="assets/mtnvid2.mov" type="video/mp4" />
-          Your browser does not support HTML5 video.
-        </video>
-        <div class="hero-overlay"></div>
-        <img src="assets/hero-overlay2.png" class="hero-overlay-graphic" alt="">
-        <div class="hero-content">
-          <h1>Creating Beautiful Smiles<br>With Gentle Care</h1>
-        </div>
-      </section>
-      
-  
+  <!-- Hero Section -->
+  <section class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="assets/officepictures2.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Creating Beautiful Smiles With Gentle Care</h1>
+        <p class="subtext">Personalized, gentle dental care in a calming and inclusive space.</p>
+      </div>
+  </section>
 
   <!-- Features Section -->
-<section class="features-section py-5">
+  <section class="features-section py-5">
     <div class="container text-center">
       <h2 class="section-heading">Experience Our Difference</h2>
       <div class="section-line"></div>
@@ -86,38 +119,64 @@
       </div>
     </div>
   </section>
-  
-  
 
   <!-- Team Section -->
-<!-- Team Section -->
-<section class="team-section text-white py-5 position-relative">
+  <section class="team-section text-white py-5 position-relative">
     <div class="background-overlay"></div>
     <div class="container position-relative">
       <div class="row align-items-center">
-        <!-- Image Left -->
         <div class="col-lg-6 mb-4 mb-lg-0">
           <img src="assets/team.jpg" alt="Dental Team" class="img-fluid shadow">
         </div>
-        <!-- Text Right -->
         <div class="col-lg-6">
           <h2 class="section-heading text-white">Meet Your New Dental Team</h2>
-          <div class="section-line" style="margin-left:0; margin-right:auto;"></div>
+          <div class="section-line" style="margin-left:auto; margin-right:auto;"></div>
           <p class="lead mb-4">Our dedicated team is here to deliver gentle, personalized care in a welcoming, modern environment. At Modern Calm Dental, your comfort and smile are our top priorities.</p>
           <a href="#" class="btn btn-theme ms-3">Learn More</a>
-
         </div>
       </div>
     </div>
   </section>
-  
-  
-  
-  
+
+
+<section class="footer-section pt-5 pb-4">
+  <div class="container text-center text-md-start">
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <h5>Our Office</h5>
+        <p>123 Wellness Way<br>Harmony City, ON<br>(555) 123-4567</p>
+      </div>
+
+      <div class="col-md-4">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Patients</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <h5>Contact</h5>
+        <p>Email: info@example.com<br>Hours: Mon–Fri 9am–5pm</p>
+      </div>
+
+    </div>
+
+    <hr class="my-4" style="border-color: rgba(255,255,255,0.1);" />
+
+    <div class="text-center small">
+      &copy; Demo Built by SC Development 2025, all rights reserved.
+    </div>
+  </div>
+</section>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Scroll Navbar Script -->
+  <!-- Navbar scroll transition -->
   <script>
     const navbar = document.getElementById('mainNavbar');
     const logo = document.getElementById('navbarLogo');
@@ -137,6 +196,8 @@
     window.addEventListener('scroll', updateNavbar);
     window.addEventListener('load', updateNavbar);
   </script>
+
+  <!-- Animate section lines -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const observer = new IntersectionObserver(entries => {
@@ -146,12 +207,160 @@
           }
         });
       });
-  
+
       document.querySelectorAll('.section-line').forEach(line => {
         observer.observe(line);
       });
     });
   </script>
   
+<script>
+  const themes = [
+    {
+      name: 'olive',
+  vars: {
+    '--soft-green': '#f7f5ee',                  // lightened parchment base
+    '--deep-forest': '#75693c',                 // lightened from #594C23 (~20%)
+    '--mid-green': '#b89d65',                   // lightened from #9e8752
+    '--warm-gray': '#fbf9f2',                   // brighter warm-gray
+    '--neutral-text': '#5b5131',                // lighter than original #3f361a
+    '--overlay-color': 'rgba(117, 105, 60, 0.15)', // softer, desaturated version
+    '--overlay-dark': 'rgba(32, 38, 42, 0.53)',    // lighter but still legible
+    '--glass-bg': 'rgba(255, 255, 255, 0.45)',
+    '--glass-border': 'rgba(255, 255, 255, 0.1)'
+  }
+    },
+    {
+      name: 'moss',
+      vars: {
+        '--soft-green': '#eff3e8',
+        '--deep-forest': '#767249',
+        '--mid-green': '#a9b16e',
+        '--warm-gray': '#f4f7ef',
+        '--neutral-text': '#4b502a',
+        '--overlay-color': 'rgba(118, 114, 73, 0.18)',
+        '--overlay-dark': 'rgba(32, 38, 42, 0.53)',
+        '--glass-bg': 'rgba(255, 255, 255, 0.4)',
+        '--glass-border': 'rgba(255, 255, 255, 0.08)'
+      }
+    },
+    {
+      name: 'fern',
+      vars: {
+        '--soft-green': '#f0f7ec',
+        '--deep-forest': '#5f7c3a',
+        '--mid-green': '#b9d98a',
+        '--warm-gray': '#f8fcf3',
+        '--neutral-text': '#3e4c2e',
+        '--overlay-color': 'rgba(95, 124, 58, 0.15)',
+        '--overlay-dark': 'rgba(32, 38, 42, 0.53)',
+        '--glass-bg': 'rgba(255, 255, 255, 0.45)',
+        '--glass-border': 'rgba(255, 255, 255, 0.08)'
+      }
+    },
+    {
+      name: 'slate',
+      vars: {
+        '--soft-green': '#f7f9fa',
+        '--deep-forest': '#36454f',
+        '--mid-green': '#5e7382',
+        '--warm-gray': '#dee3e8',
+        '--neutral-text': '#36454f',
+        '--overlay-color': 'rgba(20, 24, 28, 0.25)',
+        '--overlay-dark': 'rgba(32, 38, 42, 0.53)',
+        '--glass-bg': 'rgba(255, 255, 255, 0.4)',
+        '--glass-border': 'rgba(0, 0, 0, 0)'
+      }
+    },
+    {
+      name: 'ash',
+      vars: {
+        '--soft-green': '#f5f7f9',
+        '--deep-forest': '#3a4854',       /* Slightly bluer than slate */
+        '--mid-green': '#6d7e8a',         /* Cooler slate-blue accent */
+        '--warm-gray': '#e3e7ec',
+        '--neutral-text': '#3a4854',
+        '--overlay-color': 'rgba(25, 30, 35, 0.24)',
+        '--overlay-dark': 'rgba(30, 35, 42, 0.52)',
+        '--glass-bg': 'rgba(255, 255, 255, 0.4)',
+        '--glass-border': 'rgba(0, 0, 0, 0)'
+      }
+    },
+    {
+      name: 'charcoal',
+      vars: {
+        '--soft-green': '#f8f9fa',
+        '--deep-forest': '#2e3336',
+        '--mid-green': '#4f5a61',
+        '--warm-gray': '#dfe4e8',
+        '--neutral-text': '#2e3336',
+        '--overlay-color': 'rgba(15, 15, 15, 0.28)',
+        '--overlay-dark': 'rgba(25, 25, 25, 0.55)',
+        '--glass-bg': 'rgba(255, 255, 255, 0.4)',
+        '--glass-border': 'rgba(0, 0, 0, 0)'
+      }
+    }
+  ];
+
+  const slider = document.getElementById('themeSlider');
+  const label = document.getElementById('activeThemeLabel');
+
+  function applyTheme(index) {
+  const theme = themes[index];
+
+  // Apply CSS variables
+  for (const key in theme.vars) {
+    document.documentElement.style.setProperty(key, theme.vars[key]);
+  }
+
+  label.textContent = theme.name;
+  updateSwatchDisplay(theme);
+
+  // Update team-section background image
+  const teamSection = document.querySelector('.team-section');
+  if (teamSection) {
+    const bgImage = index <= 2 ? 'trees.jpg' : 'cliffs.jpg'; // first 3 = green, last 3 = rock
+    teamSection.style.backgroundImage = `url('assets/${bgImage}')`;
+  }
+}
+
+
+  function updateSwatchDisplay(theme) {
+    const display = document.getElementById('currentThemeSwatches');
+    if (!display) return;
+
+    display.innerHTML = '';
+
+    const swatchKeys = [
+      { key: '--soft-green', label: 'soft' },
+      { key: '--deep-forest', label: 'main' },
+      { key: '--mid-green', label: 'accent' },
+      { key: '--overlay-dark', label: 'overlay' },
+      { key: '--neutral-text', label: 'text' }
+    ];
+
+    swatchKeys.forEach(({ key, label }) => {
+      const color = theme.vars[key];
+      const swatch = document.createElement('div');
+      swatch.className = 'theme-color-swatch';
+      swatch.innerHTML = `
+        <div class="swatch-circle" style="background:${color};"></div>
+        <div>${label}</div>
+      `;
+      display.appendChild(swatch);
+    });
+  }
+
+  slider.addEventListener('input', () => {
+    applyTheme(parseInt(slider.value));
+  });
+
+  // On page load
+  applyTheme(parseInt(slider.value));
+</script>
+
+
+
+
 </body>
 </html>

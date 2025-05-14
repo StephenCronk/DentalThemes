@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nature A</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Remove Playfair Display and Urbanist, keep DM Sans if needed -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="assets/modified-nature-light.css" rel="stylesheet" />
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+</head>
+
+<body>
+<div id="themeSliderContainer">
+  <div class="theme-info-box">
+    <span id="activeThemeLabel">Earth</span>
+    <div id="currentThemeSwatches">
+  <!-- Swatches will be inserted dynamically -->
+</div>
+
+
+    <input type="range" min="0" max="5" value="0" class="horizontal-slider" id="themeSlider">
+  </div>
+</div>
+
+
+
+  <!-- Navbar -->
+  <nav id="mainNavbar" class="navbar navbar-expand-lg fixed-top transparent px-4">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img id="navbarLogo" src="assets/cd_logo_dark.png" alt="Logo" height="40" class="me-2">
+      
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-center">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Patients</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Team</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+
+      <a href="#" class="btn btn-theme ms-3">Book Now</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="assets/officepictures2.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Creating Beautiful Smiles With Gentle Care</h1>
+        <p class="subtext">Personalized, gentle dental care in a calming and inclusive space.</p>
+      </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section py-5">
+    <div class="container text-center">
+      <h2 class="section-heading">Experience Our Difference</h2>
+      <div class="section-line"></div>
+      <div class="row g-5 mt-4 justify-content-center">
+        <div class="col-6 col-md-3">
+          <div class="feature-item">
+            <i class="bi bi-house-heart feature-icon mb-3"></i>
+            <h5>Stress Free Space</h5>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="feature-item">
+            <i class="bi bi-cup-hot feature-icon mb-3"></i>
+            <h5>Comfortable Office</h5>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="feature-item">
+            <i class="bi bi-clock feature-icon mb-3"></i>
+            <h5>Convenient</h5>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="feature-item">
+            <i class="bi bi-people feature-icon mb-3"></i>
+            <h5>Inclusive</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section text-white py-5 position-relative">
+    <div class="background-overlay"></div>
+    <div class="container position-relative">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <img src="assets/team.jpg" alt="Dental Team" class="img-fluid shadow">
+        </div>
+        <div class="col-lg-6">
+          <h2 class="section-heading text-white">Meet Your New Dental Team</h2>
+          <div class="section-line" style="margin-left:auto; margin-right:auto;"></div>
+          <p class="lead mb-4">Our dedicated team is here to deliver gentle, personalized care in a welcoming, modern environment. At Modern Calm Dental, your comfort and smile are our top priorities.</p>
+          <a href="#" class="btn btn-theme ms-3">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Navbar scroll transition -->
+  <script>
+    const navbar = document.getElementById('mainNavbar');
+    const logo = document.getElementById('navbarLogo');
+
+    function updateNavbar() {
+      if (window.scrollY > 50) {
+        navbar.classList.add('solid');
+        navbar.classList.remove('transparent');
+        logo.src = 'assets/cd_logo_light.png';
+      } else {
+        navbar.classList.add('transparent');
+        navbar.classList.remove('solid');
+        logo.src = 'assets/cd_logo_dark.png';
+      }
+    }
+
+    window.addEventListener('scroll', updateNavbar);
+    window.addEventListener('load', updateNavbar);
+  </script>
+
+  <!-- Animate section lines -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('grow');
+          }
+        });
+      });
+
+      document.querySelectorAll('.section-line').forEach(line => {
+        observer.observe(line);
+      });
+    });
+  </script>
+  
+<script>
+  const themes = [
+    {
+      name: 'olive',
+      vars: {
+        '--soft-green': '#f3efe5',
+        '--deep-forest': '#594C23',
+        '--mid-green': '#9e8752',
+        '--warm-gray': '#f8f4ec',
+        '--neutral-text': '#3f361a',
+        '--overlay-color': 'rgba(89, 76, 35, 0.18)',
+        '--overlay-dark': 'rgba(89, 76, 35, 0.7)',
+        '--glass-bg': 'rgba(255, 255, 255, 0.45)',
+        '--glass-border': 'rgba(255, 255, 255, 0.1)'
+      }
+    },
+    {
+      name: 'moss',
+      vars: {
+        '--soft-green': '#eff3e8',
+        '--deep-forest': '#767249',
+        '--mid-green': '#a9b16e',
+        '--warm-gray': '#f4f7ef',
+        '--neutral-text': '#4b502a',
+        '--overlay-color': 'rgba(118, 114, 73, 0.18)',
+        '--overlay-dark': 'rgba(118, 114, 73, 0.7)',
+        '--glass-bg': 'rgba(255, 255, 255, 0.4)',
+        '--glass-border': 'rgba(255, 255, 255, 0.08)'
+      }
+    },
+    {
+      name: 'fern',
+      vars: {
+        '--soft-green': '#f0f7ec',
+        '--deep-forest': '#5f7c3a',
+        '--mid-green': '#b9d98a',
+        '--warm-gray': '#f8fcf3',
+        '--neutral-text': '#3e4c2e',
+        '--overlay-color': 'rgba(95, 124, 58, 0.15)',
+        '--overlay-dark': 'rgba(95, 124, 58, 0.6)',
+        '--glass-bg': 'rgba(255, 255, 255, 0.45)',
+        '--glass-border': 'rgba(255, 255, 255, 0.08)'
+      }
+    },
+    {
+      name: 'sage',
+      vars: {
+        '--soft-green': '#e9f3ec',
+        '--deep-forest': '#6a8674',
+        '--mid-green': '#b3cab4',
+        '--warm-gray': '#f2f8f5',
+        '--neutral-text': '#3e5d50',
+        '--overlay-color': 'rgba(106, 134, 116, 0.18)',
+        '--overlay-dark': 'rgba(106, 134, 116, 0.7)',
+        '--glass-bg': 'rgba(255, 255, 255, 0.45)',
+        '--glass-border': 'rgba(255, 255, 255, 0.07)'
+      }
+    },
+    {
+      name: 'mint',
+      vars: {
+        '--soft-green': '#e6fdfa',
+        '--deep-forest': '#4fb49c',
+        '--mid-green': '#a8e6cf',
+        '--warm-gray': '#f0fdfb',
+        '--neutral-text': '#2e655c',
+        '--overlay-color': 'rgba(79, 180, 156, 0.14)',
+        '--overlay-dark': 'rgba(79, 180, 156, 0.5)',
+        '--glass-bg': 'rgba(255, 255, 255, 0.50)',
+        '--glass-border': 'rgba(255, 255, 255, 0.06)'
+      }
+    },
+    {
+      name: 'slate',
+      vars: {
+        '--soft-green': '#f7f9fa',
+        '--deep-forest': '#36454f',
+        '--mid-green': '#5e7382',
+        '--warm-gray': '#dee3e8',
+        '--neutral-text': '#36454f',
+        '--overlay-color': 'rgba(15, 15, 15, 0.25)',
+        '--overlay-dark': 'rgba(15, 15, 15, 0.6)',
+        '--glass-bg': 'rgba(255, 255, 255, 0.65)',
+        '--glass-border': 'rgba(0, 0, 0, 0)'
+      }
+    }
+  ];
+
+  const slider = document.getElementById('themeSlider');
+  const label = document.getElementById('activeThemeLabel');
+
+  function applyTheme(index) {
+    const theme = themes[index];
+    for (const key in theme.vars) {
+      document.documentElement.style.setProperty(key, theme.vars[key]);
+    }
+    label.textContent = theme.name;
+    updateSwatchDisplay(theme);
+  }
+
+  function updateSwatchDisplay(theme) {
+    const display = document.getElementById('currentThemeSwatches');
+    if (!display) return;
+
+    display.innerHTML = '';
+
+    const swatchKeys = [
+  { key: '--soft-green', label: 'soft' },
+  { key: '--deep-forest', label: 'main' },
+  { key: '--mid-green', label: 'accent' },
+  { key: '--overlay-color', label: 'overlay' },
+  { key: '--neutral-text', label: 'text' }
+];
+
+
+    swatchKeys.forEach(({ key, label }) => {
+      const color = theme.vars[key];
+      const swatch = document.createElement('div');
+      swatch.className = 'theme-color-swatch';
+      swatch.innerHTML = `
+        <div class="swatch-circle" style="background:${color};"></div>
+        <div>${label}</div>
+      `;
+      display.appendChild(swatch);
+    });
+  }
+
+  slider.addEventListener('input', () => {
+    applyTheme(parseInt(slider.value));
+  });
+
+  // On page load
+  applyTheme(parseInt(slider.value));
+</script>
+
+
+
+</body>
+</html>

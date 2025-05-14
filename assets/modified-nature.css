@@ -1,0 +1,244 @@
+/* --- Nature Theme CSS (Updated Fonts & Palette) --- */
+:root {
+    --earth-anchor: #594C23;       /* earthy olive-brown anchor */
+    --soft-olive: #F3F1E9;         /* warm background, like parchment */
+    --moss-green: #76835B;         /* desaturated green, for text/buttons */
+    --sage-green: #AEBF94;         /* muted accent, great for cards/hover */
+    --warm-beige: #FFFDF8;         /* Off-white with warmth */
+    --neutral-text: #3B3B2F;       /* Dark mossy gray-brown */
+}
+
+body {
+    font-family: 'DM Sans', 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: var(--soft-olive);
+    color: var(--neutral-text);
+    line-height: 1.6;
+}
+
+h1, h2, h3, .section-heading {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    color: var(--moss-green);
+    letter-spacing: 0.5px;
+}
+
+.navbar-brand {
+    font-family: 'Aptos', 'Arial', sans-serif;
+    font-weight: 700;
+    color: var(--earth-anchor);
+}
+
+.navbar {
+    transition: background-color 0.4s ease, color 0.4s ease, border-bottom 0.4s ease;
+    font-family: 'Aptos', 'Arial', sans-serif;
+    font-weight: 600;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid transparent;
+    border-radius: 8px;
+    background-color: var(--soft-olive);
+}
+
+.navbar.transparent {
+    background-color: transparent;
+    border-bottom: none;
+}
+
+.navbar.transparent .nav-link,
+.navbar.transparent .navbar-brand,
+.navbar.transparent .btn-theme {
+    color: #ffffff !important;
+}
+
+.navbar.solid {
+    background-color: var(--soft-olive);
+    border-bottom: 1px solid var(--sage-green);
+    border-radius: 8px;
+}
+
+.navbar.solid .nav-link,
+.navbar.solid .navbar-brand {
+    color: var(--earth-anchor) !important;
+}
+
+/* Hero Section (video-based layout) */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 3rem;
+    text-align: left;
+    color: white;
+}
+
+.hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(89, 76, 35, 0.35); /* earth-anchor, subtle overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    padding: 1rem 2rem;
+    max-width: 600px;
+    font-family: 'DM Sans', sans-serif;
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.45); /* Light frosted look */
+    color: var(--neutral-text);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px); /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Glass edge highlight */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Optional depth */
+}
+
+/* Fallback for browsers that don't support backdrop-filter */
+@supports not (backdrop-filter: blur(1px)) {
+    .hero-content {
+        background: rgba(255, 255, 255, 0.65); /* More solid background */
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+}
+
+
+.hero h1 {
+    font-size: 3.2rem;
+    font-family: 'Baskerville', serif;
+    font-weight: 400;
+    color: var(--earth-anchor);
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.hero p.subtext {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--neutral-text);
+    margin-top: 0;
+    font-family: 'DM Sans', 'Arial', sans-serif;
+}
+
+.section-heading {
+    font-family: 'DM Sans', 'Arial', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--moss-green);
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.section-line {
+    width: 100px;
+    height: 3px;
+    background-color: var(--sage-green);
+    margin: 0 auto 2rem;
+    border-radius: 4px;
+    transition: width 0.8s ease;
+}
+
+.section-line.grow {
+    width: 180px;
+}
+
+.btn-theme {
+    background-color: var(--moss-green);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.6rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    font-family: 'DM Sans', 'Arial', sans-serif;
+}
+
+.btn-theme:hover {
+    background-color: var(--sage-green);
+    color: var(--earth-anchor);
+}
+
+.card {
+    background-color: var(--warm-beige);
+    border: 1px solid var(--sage-green);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(89, 76, 35, 0.05);
+    transition: transform 0.2s ease;
+    padding: 1.5rem;
+    text-align: center;
+    font-family: 'DM Sans', 'Arial', sans-serif;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card h5 {
+    color: var(--moss-green);
+    font-weight: 700;
+    margin-top: 1rem;
+    font-family: 'DM Sans', 'Arial', sans-serif;
+}
+
+.features-section {
+    background-color: var(--soft-olive);
+    padding: 6rem 0;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: var(--moss-green);
+    margin-bottom: 1rem;
+}
+
+.team-section {
+    background: url('../assets/trees.jpg') center center / cover no-repeat fixed;
+    position: relative;
+    color: white;
+    padding: 5rem 0;
+}
+
+.team-section .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(174, 191, 148, 0.25); /* sage-green overlay */
+    z-index: 1;
+}
+
+.team-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.team-section img {
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.team-section .section-heading,
+.team-section p.lead {
+    color: var(--soft-olive);
+    font-family: 'DM Sans', 'Arial', sans-serif;
+}
